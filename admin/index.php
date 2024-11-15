@@ -28,43 +28,6 @@ include '../config/conexion.php';
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-
-    <script type="text/javascript">
-        google.charts.load("current", {
-            packages: ["corechart"]
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Proveedor', 'Cantidad'],
-                <?php
-                require_once '../config/confiig.php';
-                include_once '../config/conexion.php';
-
-                $consulta = "SELECT pr.nombre AS proveedor, COUNT(p.id_producto) AS cantidad_productos
-                                        FROM productos p
-                                        JOIN proveedores pr ON p.id_proveedor = pr.id_proveedor
-                                        GROUP BY pr.nombre;";
-                $resultado = $pdo->prepare($consulta);
-                $resultado->execute();
-                $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-                foreach ($data as $dat) {
-                    echo "['" . $dat['proveedor'] . "', " . $dat['cantidad_productos'] . "],";
-                }
-                ?>
-            ]);
-
-            var options = {
-                title: 'Cantidad de Productos por Proveedor',
-                is3D: true,
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-            chart.draw(data, options);
-        }
-    </script>
-
     <script type="text/javascript">
         google.charts.load('current', {
             'packages': ['bar']
@@ -173,9 +136,9 @@ include '../config/conexion.php';
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">vistas General</h6>
-                        <a class="collapse-item" href="pages/clientes.php">Usuarios</a>
-                        <a class="collapse-item" href="pages/empleados.php">Empleados</a>
-                        <a class="collapse-item" href="pages/roles.php">Roles</a>
+                        <a class="collapse-item" href="#">Usuarios</a>
+                        <a class="collapse-item" href="#">Empleados</a>
+                        <a class="collapse-item" href="#">Roles</a>
                     </div>
                 </div>
             </li>
@@ -189,9 +152,9 @@ include '../config/conexion.php';
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">gestión personalizada</h6>
-                        <a class="collapse-item" href="pages/proveedores.php">Proveedores</a>
-                        <a class="collapse-item" href="pages/categorias.php">Categorias</a>
-                        <a class="collapse-item" href="pages/productos.php">Productos</a>
+                        <a class="collapse-item" href="#">Proveedores</a>
+                        <a class="collapse-item" href="#">Categorias</a>
+                        <a class="collapse-item" href="#">Productos</a>
                     </div>
                 </div>
             </li>
@@ -213,9 +176,9 @@ include '../config/conexion.php';
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Apartado Ventas</h6>
-                        <a class="collapse-item" href="pages/ventas.php ">ventas</a>
-                        <a class="collapse-item" href="pages/ventasSemanal.php ">Semanal</a>
-                        <a class="collapse-item" href="pages/ventasMensual.php ">Mensual</a>
+                        <a class="collapse-item" href="#">ventas</a>
+                        <a class="collapse-item" href="#">Semanal</a>
+                        <a class="collapse-item" href="#">Mensual</a>
                     </div>
                 </div>
             </li>
@@ -326,147 +289,7 @@ include '../config/conexion.php';
                     </div>
 
 
-                    <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Ganancias (Estimadas)
-                                            </div>
-                                            <?php
-                                            require_once '../config/confiig.php';
-                                            include_once '../config/conexion.php';
-
-                                            // Obtener precio y stock de los productos
-                                            $consulta = "SELECT `precio`, `stock` FROM `productos`";
-                                            $resultado = $pdo->prepare($consulta);
-                                            $resultado->execute();
-                                            $productos = $resultado->fetchAll(PDO::FETCH_ASSOC);
-
-                                            // Inicializar el total del inventario
-                                            $totalInventario = 0;
-
-                                            // Calcular el valor total del inventario
-                                            foreach ($productos as $producto) {
-                                                $totalInventario += $producto['precio'] * $producto['stock'];
-                                            }
-                                            ?>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> S/.
-                                                <?php echo number_format($totalInventario, 2); ?>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Ganancias (Stock minimo)
-                                            </div>
-                                            <?php
-                                            require_once '../config/confiig.php';
-                                            include_once '../config/conexion.php';
-
-                                            // Obtener productos cuyo stock es menor o igual al stock mínimo
-                                            $consulta = "SELECT p.precio, p.stock, p.stockMin FROM productos AS p WHERE p.stock <= p.stockMin";
-                                            $resultado = $pdo->prepare($consulta);
-                                            $resultado->execute();
-                                            $productos = $resultado->fetchAll(PDO::FETCH_ASSOC);
-
-                                            // Inicializar el total del inventario
-                                            $totalInventario = 0;
-
-                                            // Calcular el valor total del inventario
-                                            foreach ($productos as $producto) {
-                                                $totalInventario += $producto['precio'] * $producto['stock'];
-                                            }
-                                            ?>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?php echo number_format($totalInventario, 2); ?>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Productos con Stock Bajo
-                                            </div>
-                                            <?php
-                                            require_once '../config/confiig.php';
-                                            include_once '../config/conexion.php';
-
-                                            // Obtener productos cuyo stock es menor o igual al stock mínimo
-                                            $consulta = "SELECT p.stock FROM productos AS p WHERE p.stock <= p.stockMin";
-                                            $resultado = $pdo->prepare($consulta);
-                                            $resultado->execute();
-                                            $productos = $resultado->fetchAll(PDO::FETCH_ASSOC);
-
-                                            // Inicializar la cantidad total de productos con stock bajo
-                                            $cantidadTotal = 0;
-
-                                            // Calcular la cantidad total de productos con stock bajo
-                                            foreach ($productos as $producto) {
-                                                $cantidadTotal += $producto['stock'];
-                                            }
-                                            ?>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?php echo number_format($cantidadTotal, 0); ?>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Solicitudes Pendientes</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Graficas -->
                     <div class="row">
@@ -500,7 +323,7 @@ include '../config/conexion.php';
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Desarrollado por Grupo 5 &copy; Tienda Rojas</span>
+                        <span>Desarrollado &copy; PreAcoso</span>
                     </div>
                 </div>
             </footer>

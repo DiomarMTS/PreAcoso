@@ -41,7 +41,6 @@
                 </div>
                 <div class="sidebar-brand-text mx-3" style="height: 5px;">
                     Bienvenido
-                    <?php echo htmlspecialchars($_SESSION['first']); ?> <?php echo htmlspecialchars($_SESSION['last']); ?>
 
                 </div>
             </a>
@@ -118,9 +117,9 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Gestion de ventas</h6>
-                        <a class="collapse-item" href="../pages/ventas.php">ventas</a>
-                        <a class="collapse-item" href="../pages/ventasSemanal.php ">Semanal</a>
-                        <a class="collapse-item" href="../pages/ventasMensual.php ">Mensual</a>
+                        <a class="collapse-item" href="#">ventas</a>
+                        <a class="collapse-item" href="# ">Semanal</a>
+                        <a class="collapse-item" href="#">Mensual</a>
                     </div>
                 </div>
             </li>
