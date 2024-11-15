@@ -131,16 +131,16 @@ session_start();
                 <div class="d-flex  flex-column flex-lg-row align-items-center">
                   <ul class="navbar-nav  ">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/about.php">About </a>
+                      <a class="nav-link" href="pages/about.php">Informacion</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/service.php">Services </a>
+                      <a class="nav-link" href="pages/service.php">Servcios </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/contact.php">Contact</a>
+                      <a class="nav-link" href="pages/contact.php">Contactenos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages/maps.php">Ver Mapa</a>
@@ -163,9 +163,6 @@ session_start();
                       </li>
                     <?php endif; ?>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                  </form>
                 </div>
               </div>
             </nav>

@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $firstname;
                 $_SESSION['first'] = $firstName;
                 $_SESSION['last'] = $lastName;
-                header("Location: ../admin/index.php");
+                header("Location: ../index.php");
                 exit;
             } else {
                 echo "<script>
