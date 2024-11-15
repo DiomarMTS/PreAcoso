@@ -1,0 +1,141 @@
+CREATE DATABASE PreAcoso;
+
+USE PreAcoso;
+
+-- Tabla para tipo de documentos de los usuarios
+CREATE TABLE TipoDoc(
+    id_tipoDoc INT PRIMARY KEY AUTO_INCREMENT,
+    descripcion VARCHAR(255) NOT NULL
+);
+
+-- Tabla para roles de usuarios
+CREATE TABLE Rol(
+    id_rol INT PRIMARY KEY AUTO_INCREMENT,
+    descripcion VARCHAR(255) NOT NULL
+);
+
+-- Tabla para usuarios con mejoras en la validación de datos
+CREATE TABLE Usuario(
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
+    numDocumento VARCHAR(20) NOT NULL UNIQUE, -- Limitar longitud y asegurar unicidad
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    contacto VARCHAR(9), -- Número de contacto limitado a 9 caracteres
+    email VARCHAR(255) NOT NULL UNIQUE, -- Evitar duplicados en emails
+    pass VARCHAR(255) NOT NULL, -- Se recomienda usar hash de contraseña
+    id_tipoDoc INT,
+    id_rol INT,
+    FOREIGN KEY (id_tipoDoc) REFERENCES TipoDoc(id_tipoDoc),
+    FOREIGN KEY (id_rol) REFERENCES Rol(id_rol)
+);
+
+-- Tabla de estados de medidas preventivas o correctivas
+CREATE TABLE EstadoMedida(
+    id_EstadoMedida INT PRIMARY KEY AUTO_INCREMENT,
+    descripcion VARCHAR(50) NOT NULL -- Descripción corta para mayor claridad
+);
+-- Tabla para tipos de medidas
+CREATE TABLE TipoMedida (
+    id_tipoMedida INT PRIMARY KEY AUTO_INCREMENT,
+    descripcion VARCHAR(255) NOT NULL,
+    fecha DATE NOT NULL,
+    id_EstadoMedida INT,
+    FOREIGN KEY (id_EstadoMedida) REFERENCES EstadoMedida(id_EstadoMedida)
+);
+
+-- Tabla de normativas legales aplicables
+CREATE TABLE Normas (
+    id_norma INT PRIMARY KEY AUTO_INCREMENT,
+    norma VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL
+);
+
+-- Tabla para ubicaciones geográficas
+CREATE TABLE Ubicacion (
+    id_ubicacion INT PRIMARY KEY AUTO_INCREMENT,
+    latitud DECIMAL(10,7) NOT NULL,
+    longitud DECIMAL(10,7) NOT NULL,
+    descripcion TEXT -- Detalles adicionales sobre la ubicación
+);
+
+-- Tabla para Direcciones Regionales de Educación (DRE)
+CREATE TABLE DRE (
+    id_DRE INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Tabla para UGEL (Unidades de Gestión Educativa Local)
+CREATE TABLE UGEL (
+    id_UGEL INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    id_DRE INT,
+    FOREIGN KEY (id_DRE) REFERENCES DRE(id_DRE)
+);
+
+-- Tabla para Departamentos
+CREATE TABLE Departamento (
+    id_departamento INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Tabla para Provincias
+CREATE TABLE Provincia (
+    id_Provincia INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    id_departamento INT,
+    FOREIGN KEY (id_departamento) REFERENCES Departamento(id_departamento)
+);
+
+-- Tabla para Distritos
+CREATE TABLE Distrito (
+    id_Distrito INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    id_Provincia INT,
+    FOREIGN KEY (id_Provincia) REFERENCES Provincia(id_Provincia)
+);
+
+-- Tabla para Instituciones Educativas
+CREATE TABLE InsEducativa (
+    id_institucion INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    id_Distrito INT,
+    id_ubicacion INT,
+    id_UGEL INT,
+    FOREIGN KEY (id_Distrito) REFERENCES Distrito(id_Distrito),
+    FOREIGN KEY (id_ubicacion) REFERENCES Ubicacion(id_ubicacion),
+    FOREIGN KEY (id_UGEL) REFERENCES UGEL(id_UGEL)
+);
+
+-- Tabla para estados de evaluación
+CREATE TABLE EstadoEva (
+    id_EstadoEva INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Tabla para evaluaciones de casos
+CREATE TABLE Evaluacion (
+    id_evaluacion INT PRIMARY KEY AUTO_INCREMENT,
+    resultadoInformal VARCHAR(255), -- Mayor longitud para detalle del resultado
+    fechaEvaluacion DATE NOT NULL,
+    fechaFinal DATE,
+    id_EstadoEva INT,
+    FOREIGN KEY (id_EstadoEva) REFERENCES EstadoEva(id_EstadoEva)
+);
+
+-- Tabla para registro de casos
+CREATE TABLE Caso (
+    id_Caso INT PRIMARY KEY AUTO_INCREMENT,
+    fechaHecho DATE NOT NULL,
+    cargoAgresor VARCHAR(100),
+    tipoViolencia VARCHAR(255) NOT NULL,
+    id_user INT,
+    id_norma INT,
+    id_tipoMedida INT,
+    id_institucion INT,
+    id_evaluacion INT,
+    FOREIGN KEY (id_user) REFERENCES Usuario(id_user),
+    FOREIGN KEY (id_norma) REFERENCES Normas(id_norma),
+    FOREIGN KEY (id_tipoMedida) REFERENCES TipoMedida(id_tipoMedida),
+    FOREIGN KEY (id_institucion) REFERENCES InsEducativa(id_institucion),
+    FOREIGN KEY (id_evaluacion) REFERENCES Evaluacion(id_evaluacion)
+);
