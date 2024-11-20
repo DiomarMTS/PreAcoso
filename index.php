@@ -1,4 +1,5 @@
 <?php
+//include 'config/datos.php';
 include 'config/datos.php';
 include 'config/conexion.php';
 
