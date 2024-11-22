@@ -145,7 +145,7 @@
         $(document).ready(function() {
             function cargarDatos() {
                 $.ajax({
-                    url: '../config/consulta.php',
+                    url: '../config/consultaP.php',
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {
