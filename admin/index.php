@@ -1,9 +1,15 @@
 <?php
+//include 'config/datos.php';
 include '../config/datos.php';
 include '../config/conexion.php';
-?>
 
-<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../pages/login.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +24,7 @@ include '../config/conexion.php';
     <meta name="author" content="">
 
     <title>Administrador</title>
-    <link rel="icon" href="../assets/images/images.png">
+    <link rel="icon" href="../assets/images/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -36,16 +42,16 @@ include '../config/conexion.php';
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Año', 'Abarrotes', 'Bebidas', 'Limpieza'],
+                ['Año', 'Lima', 'Arequipa', 'Cusco'],
                 ['2020', 980, 750, 500],
                 ['2021', 780, 560, 350],
-                ['2022', 660, 720, 300],
-                ['2023', 1030, 540, 350]
+                ['2022', 1023, 1000, 922],
+                ['2023', 1500, 1200, 950]
             ]);
 
             var options = {
                 chart: {
-                    title: 'Tipo de Productos más Vendidos (Anuales)',
+                    title: 'Top 3 Regiones de Perú con Más Casos de Acoso Sexual Reportados',
                 },
                 bars: 'horizontal' // Required for Material Bar Charts.
             };
@@ -94,7 +100,9 @@ include '../config/conexion.php';
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background: #cd0c17; ">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="height: 94vh;
+                background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+                background: linear-gradient(to right, #864ddf, #203376);">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -103,7 +111,7 @@ include '../config/conexion.php';
                 </div>
                 <div class="sidebar-brand-text mx-3" style="height: 5px;">
                     Bienvenido
-                    <?php echo htmlspecialchars($_SESSION['first']); ?> <?php echo htmlspecialchars($_SESSION['last']); ?>
+                    <?php echo htmlspecialchars($_SESSION['first']); ?>
 
                 </div>
             </a>
@@ -246,7 +254,7 @@ include '../config/conexion.php';
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-1 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['first']); ?></span>
+                                <span class="mr-1 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['correo']); ?></span>
                                 <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -283,26 +291,11 @@ include '../config/conexion.php';
 
                         <a href="assets/REPORTE.pdf" download="REPORTE.pdf"> <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-filetype-pdf"></i> Guia
-                            </button> </a>
-
-
+                            </button>
+                        </a>
                     </div>
-
-
-
 
                     <!-- Graficas -->
-                    <div class="row">
-                        <div class="col-xl-5 col-md-6 mb-4">
-                            <div class="card" id="piechart" style="width: 100%; height: 500px; border-radius: 10px;"></div>
-                        </div>
-
-
-                        <div class="col-xl-5 col-md-6 mb-4">
-                            <div class="card" id="piechart_3d" style="width: 100%; height: 500px;"></div>
-                        </div>
-
-                    </div>
 
                     <div class="row">
                         <div class="col-xl-6 mb-4">

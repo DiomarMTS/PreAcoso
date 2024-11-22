@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pass = $row['pass'];
         $role = $row['id_rol'];
 
+
         if ($password === $pass) {
             if ($role == 4) {
                 $_SESSION['user_id'] = $id;
@@ -27,37 +28,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $firstname;
                 $_SESSION['first'] = $firstName;
                 $_SESSION['last'] = $lastName;
-                header("Location: ../index.php");
+                header("Location: ../admin/index.php");
                 exit;
             } else {
-                echo "<script>
-                        Swal.fire({
-                            icon: 'info',
-                            title: 'Nuevo usuario',
-                            text: 'Por favor contacte al administrador.',
-                            confirmButtonText: 'Aceptar'
-                        });
-                      </script>";
+                $_SESSION['user_id'] = $id;
+                $_SESSION['correo'] = $user;
+                $_SESSION['username'] = $firstname;
+                $_SESSION['first'] = $firstName;
+                $_SESSION['last'] = $lastName;
+                header("Location: ../index.php");
+                exit;
             }
         } else {
-            echo "<script>
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Contraseña incorrecta',
-                        text: 'La contraseña que has introducido es incorrecta.',
-                        confirmButtonText: 'Aceptar'
-                    });
-                  </script>";
-        }
-    } else {
-        echo "<script>
+?>
+            <script>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Usuario no encontrado',
-                    text: 'No se encontró una cuenta con ese correo electrónico.',
+                    title: 'Contraseña incorrecta',
+                    text: 'La contraseña que has introducido es incorrecta.',
                     confirmButtonText: 'Aceptar'
                 });
-              </script>";
+            </script>
+        <?php
+        }
+    } else {
+        ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Usuario no encontrado',
+                text: 'No se encontró una cuenta con ese correo electrónico.',
+                confirmButtonText: 'Aceptar'
+            });
+        </script>
+<?php
     }
 
     $stmt = null;
@@ -201,8 +205,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/JS/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </body>

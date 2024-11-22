@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta name="author" content="">
 
     <title>Administrador</title>
-    <link rel="icon" href="../../assets/images/images.png">
+    <link rel="icon" href="../../assets/images/logo.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -42,18 +42,20 @@ if (!isset($_SESSION['user_id'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #cd0c17; ">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="height: 94vh;
+                background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+                background: linear-gradient(to right, #864ddf, #203376);"">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
-                <div class="sidebar-brand-icon">
-                    <i class="bi bi-chevron-compact-up" style="color: #cd0c17;"></i><img class="img-profile rounded-circle" src="../assets/img/undraw_profile.svg ">
-                </div>
-                <div class="sidebar-brand-text mx-3" style="height: 5px;">
-                    Bienvenido
-                    <?php echo htmlspecialchars($_SESSION['first']); ?> <?php echo htmlspecialchars($_SESSION['last']); ?>
+            <a class=" sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
+            <div class="sidebar-brand-icon">
+                <i class="bi bi-chevron-compact-up" style="color: #cd0c17;"></i><img class="img-profile rounded-circle" src="../assets/img/undraw_profile.svg ">
+            </div>
+            <div class="sidebar-brand-text mx-3" style="height: 5px;">
+                Bienvenido
+                <?php echo htmlspecialchars($_SESSION['first']); ?>
 
-                </div>
+            </div>
             </a>
             <br><br>
 

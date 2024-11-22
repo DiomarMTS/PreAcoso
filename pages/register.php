@@ -26,8 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->rowCount() > 0) {
             echo "El DNI ya está registrado. Por favor, utiliza otro.";
         } else {
-            // Cifrar la contraseña antes de almacenarla
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
 
             // Insertar el nuevo usuario en la base de datos
             $stmt = $pdo->prepare("INSERT INTO usuario (DNI, nombre, apellidoPaterno, apellidoMaterno, email, pass, id_rol) 
@@ -37,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->bindParam(':apellidoP', $lastNameP);
             $stmt->bindParam(':apellidoM', $lastNameM);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':contrasena', $hashedPassword);
-            $id_rol = 4; // Rol por defecto
+            $stmt->bindParam(':contrasena', $password);
+            $id_rol = 1; // Rol por defecto
             $stmt->bindParam(':id_rol', $id_rol);
 
             if ($stmt->execute()) {

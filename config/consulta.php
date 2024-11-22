@@ -1,6 +1,7 @@
 <?php
 // Incluye el archivo de conexión
-include 'conexion.php';
+require 'datos.php'
+require 'conexion.php'
 
 // Obtén la conexión usando la función obtenerConexion
 $pdo = obtenerConexion();
