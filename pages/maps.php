@@ -81,10 +81,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-2" style="background: #ffff;">
-
+            <div class="col-2 container bg-white" style="background: #ffff;">
+                HELLO
             </div>
             <div id="chartdiv" class="col-10" style="width: 100%;height: 700px">
+
             </div>
         </div>
 
