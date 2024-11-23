@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 20-11-2024 a las 15:46:16
+-- Tiempo de generación: 23-11-2024 a las 05:15:10
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,11 +44,25 @@ CREATE TABLE `caso` (
 --
 
 INSERT INTO `caso` (`id_Caso`, `fechaHecho`, `cargoAgresor`, `tipoViolencia`, `id_user`, `id_norma`, `id_tipoMedida`, `id_institucion`, `id_evaluacion`) VALUES
-(6, '2016-08-28', 'Profesor contratado', 'Hostigamiento y acoso Sexual', 9, 10, 13, 1, 1),
-(7, '2017-02-13', 'Profesor nombrado', 'Violación Sexual', 10, 11, 14, 1, 4),
 (21, '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
-(22, '2018-05-21', 'Profesor contratado', 'Acoso sexual', 10, 14, 15, 2, 3),
-(23, '2019-08-14', 'Auxiliar de educación', 'Hostigamiento sexual', 10, 11, 13, 4, 2);
+(22, '2022-02-15', 'Profesor Nombrado', 'Hostigamiento y acoso sexual', 14, 11, 14, 3, 2),
+(23, '2023-03-17', 'Profesor Nombrado', 'Violación sexual', 15, 11, 14, 3, 2),
+(24, '2024-05-29', 'Profesor contratado', 'Violencia con fines sexuales a través de medios tecnológicos', 16, 14, 15, 5, 1),
+(25, '2019-08-11', 'Profesor contratado', 'Violación sexual', 17, 14, 15, 5, 5),
+(31, '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
+(32, '2018-05-21', 'Profesor contratado', 'Acoso sexual', 10, 14, 15, 2, 3),
+(35, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(37, '2017-02-13', 'Ley de servicio civil', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
+(38, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(39, '2017-02-13', 'Auxiliar de educación', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
+(40, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(41, '2019-08-14', 'Trabajador CAS', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
+(42, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(43, '2019-08-14', 'Trabajador administrativo', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
+(44, '2024-02-13', 'Profesor Nombrado', 'Violación sexual', 18, 10, 1, 5, 2),
+(45, '2018-05-25', 'Profesor contratado', 'Acoso sexual', 17, 12, 13, 4, 5),
+(46, '2019-09-24', 'Auxiliar de educación', 'Hostigamiento sexual', 9, 13, 16, 3, 5),
+(47, '2019-09-04', 'Auxiliar de educación', 'Hostigamiento sexual', 14, 10, 17, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -413,6 +427,7 @@ CREATE TABLE `tipomedida` (
 --
 
 INSERT INTO `tipomedida` (`id_tipoMedida`, `descripcion`, `fecha`, `tipo`) VALUES
+(1, 'Suspensión Temporal', NULL, NULL),
 (13, 'Cese de contrato', '2019-11-18', 'Sí'),
 (14, 'Medida cautelar', NULL, 'No'),
 (15, 'Retiro', NULL, 'No'),
@@ -900,7 +915,12 @@ INSERT INTO `usuario` (`id_user`, `numDocumento`, `nombre`, `apellido`, `contact
 (10, '78531867', 'Ivan', 'Cardenas', '983472982', 'ivan@gmail.com', 'pass123', 1, 2),
 (11, 'CE654321', 'Diomar', 'Tomaya', '983472982', 'diomar@gmail.com', 'pass123', 2, 3),
 (12, 'CE123456', 'Sally', 'Jayo', '983472982', 'sally@gmail.com', 'pass123', 2, 3),
-(13, 'A12345678', 'Patrick', 'Champe', '983472982', 'patrick@gmail.com', 'pass123', 2, 4);
+(13, 'A12345678', 'Patrick', 'Champe', '983472982', 'patrick@gmail.com', 'pass123', 2, 4),
+(14, '75978994', 'Mariana', 'Janampa', '983863194', 'mariana@gmail.com', 'pass123', 1, 1),
+(15, '71245677', 'Ivana', 'Cardenas', '986646898', 'ivana@gmail.com', 'pass123', 1, 2),
+(16, 'CE356675', 'Diego', 'Tomayquispe', '999544282', 'diego@gmail.com', 'pass123', 2, 3),
+(17, 'CE123454', 'Summy', 'Jimenez', '956231123', 'summy@gmail.com', 'pass123', 2, 3),
+(18, 'A67654677', 'Patricio', 'Choque', '983995622', 'patricio@gmail.com', 'pass123', 2, 4);
 
 --
 -- Índices para tablas volcadas
@@ -1004,7 +1024,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `caso`
 --
 ALTER TABLE `caso`
-  MODIFY `id_Caso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_Caso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `departamento`
@@ -1088,7 +1108,7 @@ ALTER TABLE `ugel`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
