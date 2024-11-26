@@ -138,7 +138,10 @@ session_start();
                       <a class="nav-link" href="pages/about.php">Informacion</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/service.php">Servcios </a>
+                      <a class="nav-link" href="pages/service.php">Servicios </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages/reportar.php">Reportar Caso </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages/contact.php">Contactenos</a>
@@ -224,7 +227,7 @@ session_start();
                       estás ayudando a prevenir futuros casos y protegiendo a otras personas.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                      <a href="pages/reportar.php" class="btn-1">
                         Reportar caso
                       </a>
                     </div>
@@ -319,7 +322,7 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Our Services
+          Nuestros Servicios
         </h2>
       </div>
       <div class="service_container layout_padding2">
@@ -332,9 +335,10 @@ session_start();
               Business <br />
               Consultant
             </h4>
+            Registro de <br />casos
+            </h4>
             <p>
-              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-              slightly believable. If you are
+            Puede registrar su caso de violencia en nuestra web para poder sancionar a las personas responsables del hecho.
             </p>
           </div>
         </div>
@@ -344,12 +348,10 @@ session_start();
           </div>
           <div class="detail-box">
             <h4>
-              Marketing <br />
-              Analytics
+              Seguimiento <br />del Caso
             </h4>
             <p>
-              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-              slightly believable. If you are
+            Les brindaremos ayuda en todo momento para conocer el estado actual del caso que se haya reportado.
             </p>
           </div>
         </div>
@@ -359,19 +361,17 @@ session_start();
           </div>
           <div class="detail-box">
             <h4>
-              Financial <br />
-              Planning
+              Promover campañas de concientización
             </h4>
             <p>
-              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-              slightly believable. If you are
+            Realizamos actividades sociales para conocer los casos y tipos de agresión y reportarlo si ha visto ese tipo de conductas.
             </p>
           </div>
         </div>
       </div>
       <div>
         <a href="">
-          Read More
+          Conocer Más
         </a>
       </div>
     </div>
@@ -383,7 +383,7 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Do you have any business problem ?
+          Realizamos charlas y eventos de concientización
         </h2>
       </div>
       <div class="layout_padding2">
@@ -392,12 +392,11 @@ session_start();
         </div>
         <div class="detail-box">
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-            some form, by injected humour, or randomised words which don&#39;t look even slightly believable. I
+             Realizamos actividades sociales para conocer los casos y tipos de agresión y reportarlo si ha visto ese tipo de conductas.
           </p>
           <div>
             <a href="">
-              Read More
+              Leer Más
             </a>
           </div>
         </div>
@@ -412,13 +411,12 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Why Choose Us
+           La Ayuda que brindamos
         </h2>
       </div>
       <div class="content-container">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis
+          Nuestros seervicios estan destinados a tener un ambiente más seguro en todos los colegios del Perú
         </p>
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -427,10 +425,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                99%
+                Mayor seguridad
               </h3>
               <h6>
-                SATISFIED CLIENTS
+                para los estudiantes
               </h6>
             </div>
           </div>
@@ -440,10 +438,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                4700+
+                Seguimiento
               </h3>
               <h6>
-                AWESOME planing
+                en cada caso registrado
               </h6>
             </div>
           </div>
@@ -452,11 +450,11 @@ session_start();
               <img src="assets/images/multiple-users-silhouette.png" alt="" />
             </div>
             <div class="detail-box">
-              <h3>
-                4500+
+               <h3>
+                Agresores
               </h3>
               <h6>
-                CLIENTS
+                Todos son sancionados
               </h6>
             </div>
           </div>
@@ -465,11 +463,11 @@ session_start();
               <img src="assets/images/bar-chart.png" alt="" />
             </div>
             <div class="detail-box">
-              <h3>
-                19000+
+             <h3>
+                Estadisticas
               </h3>
               <h6>
-                DAILY business
+                de agresión reducidas
               </h6>
             </div>
           </div>
@@ -485,7 +483,7 @@ session_start();
   <section class="client_section layout_padding">
     <div class="container">
       <h2>
-        What Our Clients Says
+        Opiniones
       </h2>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -493,11 +491,9 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
+                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
+                  a los estudiantes en colegios.
                 </p>
               </div>
               <div class="detail-box">
@@ -519,11 +515,9 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                 Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
+                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
+                  a los estudiantes en colegios.
                 </p>
               </div>
               <div class="detail-box">
@@ -545,11 +539,9 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
+                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
+                  a los estudiantes en colegios.
                 </p>
               </div>
               <div class="detail-box">
@@ -580,20 +572,20 @@ session_start();
   </section>
   <!-- end client section -->
   <!-- contact section -->
-  <section class="contact_section layout_padding">
+ <section class="contact_section layout_padding">
     <div class="container contact_heading">
       <h2>
-        Contact Us
+        Contactanos
       </h2>
       <p>
-        psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        Escribenos ante cualquier duda o alguna información extra si asi lo requieres
       </p>
     </div>
     <div class="container">
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputName4">Name</label>
+            <label for="inputName4">Nombre</label>
             <input type="text" class="form-control" id="inputName4" />
           </div>
           <div class="form-group col-md-6">
@@ -604,11 +596,11 @@ session_start();
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputNumber4">Phone number</label>
+            <label for="inputNumber4">Número</label>
             <input type="tel" class="form-control" id="inputNumber4" />
           </div>
           <div class="form-group col-md-6">
-            <label for="inputState">Select Service</label>
+            <label for="inputState">Selecionar Servicio</label>
             <select id="inputState" class="form-control">
               <option selected=""></option>
               <option>...</option>
@@ -617,13 +609,13 @@ session_start();
 
         </div>
         <div class="form-group">
-          <label for="inputMessage">Message</label>
+          <label for="inputMessage">Mensaje</label>
           <input type="text" class="form-control" id="inputMessage" placeholder="" />
         </div>
     </div>
 
     <div class="d-flex justify-content-center">
-      <button type="submit" class="">Send</button>
+      <button type="submit" class="">Enviar</button>
     </div>
     </form>
 
@@ -634,236 +626,137 @@ session_start();
   <div class="footer_bg">
     <!-- info section -->
     <section class="info_section layout_padding2-bottom">
-      <div class="container">
-        <h3 class="">
-          BigWing
-        </h3>
-      </div>
-      <div class="container info_content">
+    <div class="container">
+      <h3 class="">
+        Información Adicional
+      </h3>
+    </div>
+    <div class="container info_content">
 
-        <div>
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="d-flex">
-                <h5>
-                  Useful Link
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Loram ipusm
-                    </a>
-                  </li>
-                </ul>
-              </div>
+      <div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="d-flex">
+              <h5>
+                Información de Servicio
+              </h5>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="d-flex">
-                <h5>
-                  The Services
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Lorem ipsum dolor
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      sit amet, consectetur
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      adipiscing elit,
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      sed do eiusmod
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      tempor incididunt
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div class="d-flex ">
+              <ul>
+                <li>
+                  <a href="">
+                    Nosotros
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    Nuestras Políticas
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    Servicios
+                  </a>
+                </li>
+              </ul>
+
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="d-flex">
-                <h5>
-                  Contact Us
-                </h5>
-              </div>
-              <div class="d-flex ">
-                <ul>
-                  <li>
-                    <a href="">
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      About Departments
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-                <ul class="ml-3 ml-md-5">
-                  <li>
-                    <a href="">
-                      Lorem ipsum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      dolor sit amet,
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      consectetur
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      adipiscing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      elit, sed do eiusmod
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="d-flex">
+              <h5>
+                Nuestros Servicios
+              </h5>
+            </div>
+            <div class="d-flex ">
+              <ul>
+                <li>
+                  <a href="">
+                  Registro de
+                  casos
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                  Seguimiento
+                  del Caso
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                  Promover campañas de concientización
+                  </a>
+                </li>
+
+
+              </ul>
+
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="d-flex">
+              <h5>
+                Ayuda al Usuario
+              </h5>
+            </div>
+            <div class="d-flex ">
+              <ul>
+                <li>
+                  <a href="">
+                  Centro de ayuda
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                  Preguntas frecuentes
+                  
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                  
+                  Centro de seguridad
+                  </a>
+                </li>
+
+
+              </ul>
+
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
-          <div class="social-box">
-            <a href="">
-              <img src="assets/images/fb.png" alt="" />
-            </a>
-            <a href="">
-              <img src="assets/images/twitter.png" alt="" />
-            </a>
-            <a href="">
-              <img src="assets/images/linkedin1.png" alt="" />
-            </a>
-            <a href="">
-              <img src="assets/images/instagram1.png" alt="" />
-            </a>
-          </div>
-          <div class="form_container mt-5">
-            <form action="">
-              <label for="subscribeMail">
-                Newsletter
-              </label>
-              <input type="email" placeholder="Enter Your email" id="subscribeMail" />
-              <button type="submit">
-                Subscribe
-              </button>
-            </form>
-          </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+        <div class="social-box">
+          <a href="">
+            <img src="images/fb.png" alt="" />
+          </a>
+
+          <a href="">
+            <img src="images/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/linkedin1.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/instagram1.png" alt="" />
+          </a>
+        </div>
+        <div class="form_container mt-5">
+          <form action="">
+            <label for="subscribeMail">
+              Boletín de Casos
+            </label>
+            <input type="email" placeholder="Ingrese su email" id="subscribeMail" />
+            <button type="submit">
+              Afiliarse
+            </button>
+          </form>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
     <!-- end info_section -->
 
