@@ -69,7 +69,7 @@ session_start();
                                             <a class="nav-link" href="contact.php">Contactenos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="maps.php">Ver Mapa</a>
+                                            <a class="nav-link" href="mapa.php">Ver Mapa</a>
                                         </li>
                                         <?php if (isset($_SESSION['first'])): ?>
                                             <!-- Dropdown para usuario logueado -->

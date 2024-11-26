@@ -1,7 +1,6 @@
 <?php
 // Incluye el archivo de conexión
-require 'datos.php'
-require 'conexion.php'
+include 'conexion.php';
 
 // Obtén la conexión usando la función obtenerConexion
 $pdo = obtenerConexion();
@@ -48,4 +47,3 @@ if ($pdo) {
     // Si no se pudo conectar, se devuelve un mensaje de error
     echo json_encode(['error' => 'No se pudo conectar a la base de datos']);
 }
-?>
