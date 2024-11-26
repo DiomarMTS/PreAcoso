@@ -2,62 +2,62 @@
 
 <!-- contact section -->
 <section class="contact_section layout_padding">
-  <div class="container contact_heading">
-    <h2>
-      Contact Us
-    </h2>
-    <p>
-      psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    </p>
-  </div>
-  <div class="container">
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputName4">Name</label>
-          <input type="text" class="form-control" id="inputName4" />
+    <div class="container contact_heading">
+      <h2>
+        Contactanos
+      </h2>
+      <p>
+        Escribenos ante cualquier duda o alguna información extra si asi lo requieres
+      </p>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName4">Nombre</label>
+            <input type="text" class="form-control" id="inputName4" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" />
+          </div>
+
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" />
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputNumber4">Número</label>
+            <input type="tel" class="form-control" id="inputNumber4" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState">Selecionar Servicio</label>
+            <select id="inputState" class="form-control">
+              <option selected=""></option>
+              <option>...</option>
+            </select>
+          </div>
+
         </div>
-
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputNumber4">Phone number</label>
-          <input type="tel" class="form-control" id="inputNumber4" />
+        <div class="form-group">
+          <label for="inputMessage">Mensaje</label>
+          <input type="text" class="form-control" id="inputMessage" placeholder="" />
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputState">Select Service</label>
-          <select id="inputState" class="form-control">
-            <option selected=""></option>
-            <option>...</option>
-          </select>
-        </div>
+    </div>
 
-      </div>
-      <div class="form-group">
-        <label for="inputMessage">Message</label>
-        <input type="text" class="form-control" id="inputMessage" placeholder="" />
-      </div>
-  </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="">Enviar</button>
+    </div>
+    </form>
 
-  <div class="d-flex justify-content-center">
-    <button type="submit" class="">Send</button>
-  </div>
-  </form>
-
-</section>
+  </section>
 
 
-<!-- end contact section -->
-<div class="footer_bg">
-  <!-- info section -->
-  <section class="info_section layout_padding2-bottom">
+  <!-- end contact section -->
+  <div class="footer_bg">
+    <!-- info section -->
+    <section class="info_section layout_padding2-bottom">
     <div class="container">
       <h3 class="">
-        BigWing
+        Información Adicional
       </h3>
     </div>
     <div class="container info_content">
@@ -67,190 +67,90 @@
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                Useful Link
+                Información de Servicio
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                    Nosotros
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                    Nuestras Políticas
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
+                    Servicios
                   </a>
                 </li>
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                The Services
+                Nuestros Servicios
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                  Registro de
+                  casos
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                  Seguimiento
+                  del Caso
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
+                  Promover campañas de concientización
                   </a>
                 </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </li>
+
+
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Lorem ipsum dolor
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    sit amet, consectetur
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    adipiscing elit,
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    sed do eiusmod
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    tempor incididunt
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                Contact Us
+                Ayuda al Usuario
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                  Centro de ayuda
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                  Preguntas frecuentes
+                  
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
+                  
+                  Centro de seguridad
                   </a>
                 </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </li>
+
+
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Lorem ipsum
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    dolor sit amet,
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    consectetur
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    adipiscing
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    elit, sed do eiusmod
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
         </div>
@@ -274,11 +174,11 @@
         <div class="form_container mt-5">
           <form action="">
             <label for="subscribeMail">
-              Newsletter
+              Boletín de Casos
             </label>
-            <input type="email" placeholder="Enter Your email" id="subscribeMail" />
+            <input type="email" placeholder="Ingrese su email" id="subscribeMail" />
             <button type="submit">
-              Subscribe
+              Afiliarse
             </button>
           </form>
         </div>
@@ -286,6 +186,7 @@
     </div>
 
   </section>
+
 
   <!-- end info_section -->
 
