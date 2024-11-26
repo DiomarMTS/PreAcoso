@@ -54,7 +54,7 @@
   <!-- end contact section -->
   <div class="footer_bg">
     <!-- info section -->
-    <section class="info_section layout_padding2-bottom">
+            <section class="info_section layout_padding2-bottom">
     <div class="container">
       <h3 class="">
         Información Adicional
@@ -186,6 +186,7 @@
     </div>
 
   </section>
+
 
 
   <!-- end info_section -->
