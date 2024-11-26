@@ -32,39 +32,33 @@ try {
 
 <script>
     am5.ready(function() {
-        // Paleta de colores (del más claro al más oscuro)
-        var colors = ["#E9BCB9", "#ED9E59", "#A34054", "#662249", "#44174E", "#1B1931"];
+        var colors = ["#6782dc", "#ED9E59", "#A34054", "#662249", "#44174E", "#1B1931"];
 
-        // Datos de departamentos desde PHP
         var departamentosData = <?php echo json_encode($departamentos); ?>;
 
         console.log("Datos de departamentos desde PHP:", departamentosData);
 
-        // Crear objeto de mapeo de cantidades
         var departamentoCantidades = {};
         departamentosData.forEach(function(item) {
-            // Normalizar nombres de departamentos
             var departamentoNormalizado = normalizedDepartamentoName(item.Departamento);
             departamentoCantidades[departamentoNormalizado] = item.TotalCasos;
         });
 
         console.log("Mapa de cantidades por departamento:", departamentoCantidades);
 
-        // Función para normalizar nombres de departamentos
         function normalizedDepartamentoName(nombre) {
             return nombre
                 .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "") // Eliminar acentos
+                .replace(/[\u0300-\u036f]/g, "")
                 .toUpperCase()
-                .replace(/\s+/g, ''); // Eliminar espacios
+                .replace(/\s+/g, '');
         }
 
-        // Calcular el valor máximo para normalización
         var maxCantidad = Math.max(...departamentosData.map(item => item.TotalCasos));
 
         console.log("Cantidad máxima de casos:", maxCantidad);
 
-        // Inicializar mapa
+
         var root = am5.Root.new("chartdiv");
 
         root.setThemes([
@@ -89,7 +83,6 @@ try {
             // Normalizar la cantidad (entre 0 y 5)
             var normalizedIndex = Math.floor((cantidad / maxCantidad) * (colors.length - 1));
 
-            // Asegurar que el índice esté dentro del rango
             normalizedIndex = Math.min(Math.max(normalizedIndex, 0), colors.length - 1);
 
             console.log(`Departamento: ${departamento}, Cantidad: ${cantidad}, Color: ${colors[normalizedIndex]}`);
@@ -97,11 +90,16 @@ try {
             return colors[normalizedIndex];
         }
 
-        // Aplicar colores a los polígonos después de validar los datos
         polygonSeries.events.on("datavalidated", function() {
             polygonSeries.mapPolygons.each(function(polygon) {
                 var departamento = polygon.dataItem.dataContext.name;
                 if (departamento) {
+                    var departamentoNormalizado = normalizedDepartamentoName(departamento);
+                    var cantidad = departamentoCantidades[departamentoNormalizado] || 0;
+
+                    // Añadir el dato 'cantidad' al contexto de datos
+                    polygon.dataItem.dataContext.cantidad = cantidad;
+
                     var color = getColorForDepartamento(departamento);
                     polygon.set("fill", am5.color(color));
                 } else {
@@ -110,18 +108,14 @@ try {
             });
         });
 
+
         // Tooltip dinámico
         polygonSeries.mapPolygons.template.setAll({
-            tooltipText: function(target) {
-                if (!target.dataItem || !target.dataItem.dataContext) return "Sin datos";
-                var departamento = target.dataItem.dataContext.name;
-                var departamentoNormalizado = normalizedDepartamentoName(departamento);
-                var cantidad = departamentoCantidades[departamentoNormalizado] || 0;
-                return departamento + ": " + cantidad + " casos";
-            },
+            tooltipText: "{name}: {cantidad} ",
             toggleKey: "active",
             interactive: true
         });
+
 
         polygonSeries.mapPolygons.template.states.create("hover", {
             fill: root.interfaceColors.get("primaryButtonHover")
