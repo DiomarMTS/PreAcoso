@@ -6,7 +6,7 @@
   <div class="container">
     <div class="custom_heading-container">
       <h2>
-        Our Services
+        Nuestros Servicios
       </h2>
     </div>
     <div class="service_container layout_padding2">
@@ -16,12 +16,11 @@
         </div>
         <div class="detail-box">
           <h4>
-            Business <br />
-            Consultant
+            Registro de <br />casos
+          
           </h4>
           <p>
-            have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-            slightly believable. If you are
+            Puede registrar su caso de violencia en nuestra web para poder sancionar a las personas responsables del hecho.
           </p>
         </div>
       </div>
@@ -31,12 +30,11 @@
         </div>
         <div class="detail-box">
           <h4>
-            Marketing <br />
-            Analytics
+            Seguimiento <br />del Caso
+            
           </h4>
           <p>
-            have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-            slightly believable. If you are
+            Les brindaremos ayuda en todo momento para conocer el estado actual del caso que se haya reportado.
           </p>
         </div>
       </div>
@@ -46,19 +44,18 @@
         </div>
         <div class="detail-box">
           <h4>
-            Financial <br />
-            Planning
+            Promover campañas de concientización <br />
+            
           </h4>
           <p>
-            have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
-            slightly believable. If you are
+            Realizamos actividades sociales para conocer los casos y tipos de agresión y reportarlo si ha visto ese tipo de conductas.
           </p>
         </div>
       </div>
     </div>
     <div>
       <a href="">
-        Read More
+        Conocer más
       </a>
     </div>
   </div>
@@ -71,7 +68,7 @@
   <section class="info_section layout_padding2-bottom">
     <div class="container">
       <h3 class="">
-        BigWing
+        Información Adicional
       </h3>
     </div>
     <div class="container info_content">
@@ -81,190 +78,90 @@
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                Useful Link
+                Información de Servicio
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                    Nosotros
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                    Nuestras Políticas
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
+                    Servicios
                   </a>
                 </li>
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Loram ipusm
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                The Services
+                Nuestros Servicios
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                  Registro de
+                  casos
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                  Seguimiento
+                  del Caso
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
+                  Promover campañas de concientización
                   </a>
                 </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </li>
+
+
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Lorem ipsum dolor
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    sit amet, consectetur
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    adipiscing elit,
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    sed do eiusmod
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    tempor incididunt
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="d-flex">
               <h5>
-                Contact Us
+                Ayuda al Usuario
               </h5>
             </div>
             <div class="d-flex ">
               <ul>
                 <li>
                   <a href="">
-                    About Us
+                  Centro de ayuda
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About services
+                  Preguntas frecuentes
+                  
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    About Departments
+                  
+                  Centro de seguridad
                   </a>
                 </li>
-                <li>
-                  <a href="">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </li>
+
+
               </ul>
-              <ul class="ml-3 ml-md-5">
-                <li>
-                  <a href="">
-                    Lorem ipsum
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    dolor sit amet,
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    consectetur
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    adipiscing
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    elit, sed do eiusmod
-                  </a>
-                </li>
-              </ul>
+
             </div>
           </div>
         </div>
@@ -288,11 +185,11 @@
         <div class="form_container mt-5">
           <form action="">
             <label for="subscribeMail">
-              Newsletter
+              Boletín de Casos
             </label>
-            <input type="email" placeholder="Enter Your email" id="subscribeMail" />
+            <input type="email" placeholder="Ingrese su email" id="subscribeMail" />
             <button type="submit">
-              Subscribe
+              Afiliarse
             </button>
           </form>
         </div>
