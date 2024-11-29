@@ -138,16 +138,13 @@ session_start();
                       <a class="nav-link" href="pages/about.php">Informacion</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/service.php">Servicios </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="pages/reportar.php">Reportar Caso </a>
+                      <a class="nav-link" href="pages/service.php">Servcios </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages/contact.php">Contactenos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/mapa.php">Ver Mapa</a>
+                      <a class="nav-link" href="pages/maps.php">Ver Mapa</a>
                     </li>
                     <?php if (isset($_SESSION['first'])): ?>
                       <!-- Dropdown para usuario logueado -->
@@ -227,7 +224,7 @@ session_start();
                       estás ayudando a prevenir futuros casos y protegiendo a otras personas.
                     </p>
                     <div class="btn-box">
-                      <a href="pages/reportar.php" class="btn-1">
+                      <a href="" class="btn-1">
                         Reportar caso
                       </a>
                     </div>
@@ -256,7 +253,7 @@ session_start();
                       que estamos dando para resolver tu caso y garantizar tu bienestar.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                      <a href="pages/consultarCaso.php" class="btn-1">
                         Consultar
                       </a>
                     </div>
@@ -322,7 +319,7 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Nuestros Servicios
+          Our Services
         </h2>
       </div>
       <div class="service_container layout_padding2">
@@ -335,10 +332,9 @@ session_start();
               Business <br />
               Consultant
             </h4>
-            Registro de <br />casos
-            </h4>
             <p>
-              Puede registrar su caso de violencia en nuestra web para poder sancionar a las personas responsables del hecho.
+              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
+              slightly believable. If you are
             </p>
           </div>
         </div>
@@ -348,10 +344,12 @@ session_start();
           </div>
           <div class="detail-box">
             <h4>
-              Seguimiento <br />del Caso
+              Marketing <br />
+              Analytics
             </h4>
             <p>
-              Les brindaremos ayuda en todo momento para conocer el estado actual del caso que se haya reportado.
+              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
+              slightly believable. If you are
             </p>
           </div>
         </div>
@@ -361,17 +359,19 @@ session_start();
           </div>
           <div class="detail-box">
             <h4>
-              Promover campañas de concientización
+              Financial <br />
+              Planning
             </h4>
             <p>
-              Realizamos actividades sociales para conocer los casos y tipos de agresión y reportarlo si ha visto ese tipo de conductas.
+              have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even
+              slightly believable. If you are
             </p>
           </div>
         </div>
       </div>
       <div>
         <a href="">
-          Conocer Más
+          Read More
         </a>
       </div>
     </div>
@@ -383,7 +383,7 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          Realizamos charlas y eventos de concientización
+          Do you have any business problem ?
         </h2>
       </div>
       <div class="layout_padding2">
@@ -392,11 +392,12 @@ session_start();
         </div>
         <div class="detail-box">
           <p>
-            Realizamos actividades sociales para conocer los casos y tipos de agresión y reportarlo si ha visto ese tipo de conductas.
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+            some form, by injected humour, or randomised words which don&#39;t look even slightly believable. I
           </p>
           <div>
             <a href="">
-              Leer Más
+              Read More
             </a>
           </div>
         </div>
@@ -411,12 +412,13 @@ session_start();
     <div class="container">
       <div class="custom_heading-container">
         <h2>
-          La Ayuda que brindamos
+          Why Choose Us
         </h2>
       </div>
       <div class="content-container">
         <p>
-          Nuestros seervicios estan destinados a tener un ambiente más seguro en todos los colegios del Perú
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis
         </p>
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -425,10 +427,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                Mayor seguridad
+                99%
               </h3>
               <h6>
-                para los estudiantes
+                SATISFIED CLIENTS
               </h6>
             </div>
           </div>
@@ -438,10 +440,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                Seguimiento
+                4700+
               </h3>
               <h6>
-                en cada caso registrado
+                AWESOME planing
               </h6>
             </div>
           </div>
@@ -451,10 +453,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                Agresores
+                4500+
               </h3>
               <h6>
-                Todos son sancionados
+                CLIENTS
               </h6>
             </div>
           </div>
@@ -464,10 +466,10 @@ session_start();
             </div>
             <div class="detail-box">
               <h3>
-                Estadisticas
+                19000+
               </h3>
               <h6>
-                de agresión reducidas
+                DAILY business
               </h6>
             </div>
           </div>
@@ -483,7 +485,7 @@ session_start();
   <section class="client_section layout_padding">
     <div class="container">
       <h2>
-        Opiniones
+        What Our Clients Says
       </h2>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -491,9 +493,11 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
-                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
-                  a los estudiantes en colegios.
+                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                 </p>
               </div>
               <div class="detail-box">
@@ -515,9 +519,11 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
-                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
-                  a los estudiantes en colegios.
+                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                 </p>
               </div>
               <div class="detail-box">
@@ -539,9 +545,11 @@ session_start();
             <div class="client_container layout_padding2">
               <div class="client_text">
                 <p>
-                  Este proyecto beneficiaria muchoa a los lugares donde no hay la suficiente administración reglamentaraia para que
-                  los jovenes no puedan denunciar apropiadamente los hechos de violencia, mejoraria en gran medida la reduccción de agresiones
-                  a los estudiantes en colegios.
+                  psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                 </p>
               </div>
               <div class="detail-box">
@@ -575,17 +583,17 @@ session_start();
   <section class="contact_section layout_padding">
     <div class="container contact_heading">
       <h2>
-        Contactanos
+        Contact Us
       </h2>
       <p>
-        Escribenos ante cualquier duda o alguna información extra si asi lo requieres
+        psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
       </p>
     </div>
     <div class="container">
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputName4">Nombre</label>
+            <label for="inputName4">Name</label>
             <input type="text" class="form-control" id="inputName4" />
           </div>
           <div class="form-group col-md-6">
@@ -596,11 +604,11 @@ session_start();
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputNumber4">Número</label>
+            <label for="inputNumber4">Phone number</label>
             <input type="tel" class="form-control" id="inputNumber4" />
           </div>
           <div class="form-group col-md-6">
-            <label for="inputState">Selecionar Servicio</label>
+            <label for="inputState">Select Service</label>
             <select id="inputState" class="form-control">
               <option selected=""></option>
               <option>...</option>
@@ -609,13 +617,13 @@ session_start();
 
         </div>
         <div class="form-group">
-          <label for="inputMessage">Mensaje</label>
+          <label for="inputMessage">Message</label>
           <input type="text" class="form-control" id="inputMessage" placeholder="" />
         </div>
     </div>
 
     <div class="d-flex justify-content-center">
-      <button type="submit" class="">Enviar</button>
+      <button type="submit" class="">Send</button>
     </div>
     </form>
 
@@ -628,7 +636,7 @@ session_start();
     <section class="info_section layout_padding2-bottom">
       <div class="container">
         <h3 class="">
-          Información Adicional
+          BigWing
         </h3>
       </div>
       <div class="container info_content">
@@ -638,90 +646,190 @@ session_start();
             <div class="col-md-6 col-lg-4">
               <div class="d-flex">
                 <h5>
-                  Información de Servicio
+                  Useful Link
                 </h5>
               </div>
               <div class="d-flex ">
                 <ul>
                   <li>
                     <a href="">
-                      Nosotros
+                      About Us
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      Nuestras Políticas
+                      About services
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      Servicios
+                      About Departments
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Contact Us
                     </a>
                   </li>
                 </ul>
-
+                <ul class="ml-3 ml-md-5">
+                  <li>
+                    <a href="">
+                      Loram ipusm
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Loram ipusm
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Loram ipusm
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Loram ipusm
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Loram ipusm
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="d-flex">
                 <h5>
-                  Nuestros Servicios
+                  The Services
                 </h5>
               </div>
               <div class="d-flex ">
                 <ul>
                   <li>
                     <a href="">
-                      Registro de
-                      casos
+                      About Us
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      Seguimiento
-                      del Caso
+                      About services
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      Promover campañas de concientización
+                      About Departments
                     </a>
                   </li>
-
-
+                  <li>
+                    <a href="">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Contact Us
+                    </a>
+                  </li>
                 </ul>
-
+                <ul class="ml-3 ml-md-5">
+                  <li>
+                    <a href="">
+                      Lorem ipsum dolor
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      sit amet, consectetur
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      adipiscing elit,
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      sed do eiusmod
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      tempor incididunt
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="d-flex">
                 <h5>
-                  Ayuda al Usuario
+                  Contact Us
                 </h5>
               </div>
               <div class="d-flex ">
                 <ul>
                   <li>
                     <a href="">
-                      Centro de ayuda
+                      About Us
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      Preguntas frecuentes
-
+                      About services
                     </a>
                   </li>
                   <li>
                     <a href="">
-
-                      Centro de seguridad
+                      About Departments
                     </a>
                   </li>
-
-
+                  <li>
+                    <a href="">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Contact Us
+                    </a>
+                  </li>
                 </ul>
-
+                <ul class="ml-3 ml-md-5">
+                  <li>
+                    <a href="">
+                      Lorem ipsum
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      dolor sit amet,
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      consectetur
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      adipiscing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      elit, sed do eiusmod
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -729,27 +837,26 @@ session_start();
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
           <div class="social-box">
             <a href="">
-              <img src="images/fb.png" alt="" />
-            </a>
-
-            <a href="">
-              <img src="images/twitter.png" alt="" />
+              <img src="assets/images/fb.png" alt="" />
             </a>
             <a href="">
-              <img src="images/linkedin1.png" alt="" />
+              <img src="assets/images/twitter.png" alt="" />
             </a>
             <a href="">
-              <img src="images/instagram1.png" alt="" />
+              <img src="assets/images/linkedin1.png" alt="" />
+            </a>
+            <a href="">
+              <img src="assets/images/instagram1.png" alt="" />
             </a>
           </div>
           <div class="form_container mt-5">
             <form action="">
               <label for="subscribeMail">
-                Boletín de Casos
+                Newsletter
               </label>
-              <input type="email" placeholder="Ingrese su email" id="subscribeMail" />
+              <input type="email" placeholder="Enter Your email" id="subscribeMail" />
               <button type="submit">
-                Afiliarse
+                Subscribe
               </button>
             </form>
           </div>
