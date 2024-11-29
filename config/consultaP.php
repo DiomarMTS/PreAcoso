@@ -14,7 +14,7 @@ SELECT
     C.cargoAgresor, 
     C.tipoViolencia, 
     U.nombre AS NombreUsuario, 
-    U.apellido AS ApellidoUsuario, 
+    U.apellidoPaterno AS ApellidoUsuario, 
     IE.nombre AS InstitucionEducativa, 
     N.norma AS NormaAplicada, 
     TM.descripcion AS TipoMedida
