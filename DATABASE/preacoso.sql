@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 23-11-2024 a las 05:15:10
+-- Tiempo de generación: 29-11-2024 a las 18:22:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `caso` (
   `id_Caso` int(11) NOT NULL,
+  `numdoc` varchar(10) DEFAULT NULL,
   `fechaHecho` date NOT NULL,
   `cargoAgresor` varchar(100) DEFAULT NULL,
   `tipoViolencia` varchar(255) NOT NULL,
@@ -43,26 +44,26 @@ CREATE TABLE `caso` (
 -- Volcado de datos para la tabla `caso`
 --
 
-INSERT INTO `caso` (`id_Caso`, `fechaHecho`, `cargoAgresor`, `tipoViolencia`, `id_user`, `id_norma`, `id_tipoMedida`, `id_institucion`, `id_evaluacion`) VALUES
-(21, '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
-(22, '2022-02-15', 'Profesor Nombrado', 'Hostigamiento y acoso sexual', 14, 11, 14, 3, 2),
-(23, '2023-03-17', 'Profesor Nombrado', 'Violación sexual', 15, 11, 14, 3, 2),
-(24, '2024-05-29', 'Profesor contratado', 'Violencia con fines sexuales a través de medios tecnológicos', 16, 14, 15, 5, 1),
-(25, '2019-08-11', 'Profesor contratado', 'Violación sexual', 17, 14, 15, 5, 5),
-(31, '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
-(32, '2018-05-21', 'Profesor contratado', 'Acoso sexual', 10, 14, 15, 2, 3),
-(35, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
-(37, '2017-02-13', 'Ley de servicio civil', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
-(38, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
-(39, '2017-02-13', 'Auxiliar de educación', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
-(40, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
-(41, '2019-08-14', 'Trabajador CAS', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
-(42, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
-(43, '2019-08-14', 'Trabajador administrativo', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
-(44, '2024-02-13', 'Profesor Nombrado', 'Violación sexual', 18, 10, 1, 5, 2),
-(45, '2018-05-25', 'Profesor contratado', 'Acoso sexual', 17, 12, 13, 4, 5),
-(46, '2019-09-24', 'Auxiliar de educación', 'Hostigamiento sexual', 9, 13, 16, 3, 5),
-(47, '2019-09-04', 'Auxiliar de educación', 'Hostigamiento sexual', 14, 10, 17, 2, 4);
+INSERT INTO `caso` (`id_Caso`, `numdoc`, `fechaHecho`, `cargoAgresor`, `tipoViolencia`, `id_user`, `id_norma`, `id_tipoMedida`, `id_institucion`, `id_evaluacion`) VALUES
+(21, 'Doc0001', '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
+(22, NULL, '2022-02-15', 'Profesor Nombrado', 'Hostigamiento y acoso sexual', 14, 11, 14, 3, 2),
+(23, NULL, '2023-03-17', 'Profesor Nombrado', 'Violación sexual', 15, 11, 14, 3, 2),
+(24, NULL, '2024-05-29', 'Profesor contratado', 'Violencia con fines sexuales a través de medios tecnológicos', 16, 14, 15, 5, 1),
+(25, NULL, '2019-08-11', 'Profesor contratado', 'Violación sexual', 17, 14, 15, 5, 5),
+(31, NULL, '2017-02-13', 'Profesor Nombrado', 'Violación sexual', 10, 11, 14, 1, 4),
+(32, NULL, '2018-05-21', 'Profesor contratado', 'Acoso sexual', 10, 14, 15, 2, 3),
+(35, NULL, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(37, NULL, '2017-02-13', 'Ley de servicio civil', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
+(38, NULL, '2018-05-21', 'Profesor contratado', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(39, NULL, '2017-02-13', 'Auxiliar de educación', 'Hostigamiento y acoso sexual', 10, 11, 14, 1, 4),
+(40, NULL, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(41, NULL, '2019-08-14', 'Trabajador CAS', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
+(42, NULL, '2018-05-21', 'Sin regimen laboral', 'Tocamientos indebidos', 10, 14, 15, 2, 3),
+(43, NULL, '2019-08-14', 'Trabajador administrativo', 'Violencia con fines sexuales a través de medios tecnológicos', 10, 11, 13, 4, 2),
+(44, NULL, '2024-02-13', 'Profesor Nombrado', 'Violación sexual', 18, 10, 1, 5, 2),
+(45, NULL, '2018-05-25', 'Profesor contratado', 'Acoso sexual', 17, 12, 13, 4, 5),
+(46, NULL, '2019-09-24', 'Auxiliar de educación', 'Hostigamiento sexual', 9, 13, 16, 3, 5),
+(47, NULL, '2019-09-04', 'Auxiliar de educación', 'Hostigamiento sexual', 14, 10, 17, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -898,7 +899,8 @@ CREATE TABLE `usuario` (
   `id_user` int(11) NOT NULL,
   `numDocumento` varchar(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `apellido` varchar(100) NOT NULL,
+  `apellidoPaterno` varchar(100) NOT NULL,
+  `apellidoMaterno` varchar(100) NOT NULL,
   `contacto` varchar(9) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
@@ -910,17 +912,17 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_user`, `numDocumento`, `nombre`, `apellido`, `contacto`, `email`, `pass`, `id_tipoDoc`, `id_rol`) VALUES
-(9, '75792714', 'Julia', 'Janampa', '983472982', 'julia@gmail.com', 'pass123', 1, 1),
-(10, '78531867', 'Ivan', 'Cardenas', '983472982', 'ivan@gmail.com', 'pass123', 1, 2),
-(11, 'CE654321', 'Diomar', 'Tomaya', '983472982', 'diomar@gmail.com', 'pass123', 2, 3),
-(12, 'CE123456', 'Sally', 'Jayo', '983472982', 'sally@gmail.com', 'pass123', 2, 3),
-(13, 'A12345678', 'Patrick', 'Champe', '983472982', 'patrick@gmail.com', 'pass123', 2, 4),
-(14, '75978994', 'Mariana', 'Janampa', '983863194', 'mariana@gmail.com', 'pass123', 1, 1),
-(15, '71245677', 'Ivana', 'Cardenas', '986646898', 'ivana@gmail.com', 'pass123', 1, 2),
-(16, 'CE356675', 'Diego', 'Tomayquispe', '999544282', 'diego@gmail.com', 'pass123', 2, 3),
-(17, 'CE123454', 'Summy', 'Jimenez', '956231123', 'summy@gmail.com', 'pass123', 2, 3),
-(18, 'A67654677', 'Patricio', 'Choque', '983995622', 'patricio@gmail.com', 'pass123', 2, 4);
+INSERT INTO `usuario` (`id_user`, `numDocumento`, `nombre`, `apellidoPaterno`, `apellidoMaterno`, `contacto`, `email`, `pass`, `id_tipoDoc`, `id_rol`) VALUES
+(9, '75792714', 'Julia', 'Janampa', 'Pérez', '983472982', 'julia@gmail.com', 'pass123', 1, 1),
+(10, '78531867', 'Ivan', 'Cardenas', 'Flores', '983472982', 'ivan@gmail.com', 'pass123', 1, 2),
+(11, 'CE654321', 'Diomar', 'Tomaya', 'Sánchez', '983472982', 'diomar@gmail.com', 'pass123', 2, 3),
+(12, 'CE123456', 'Sally', 'Jayo', 'Pérez', '983472982', 'sally@gmail.com', 'pass123', 2, 3),
+(13, 'CE993456', 'Patrick', 'Champe', 'Pérez', '983472982', 'patrick@gmail.com', 'pass123', 2, 4),
+(14, '75978994', 'Mariana', 'Janampa', 'Pérez', '983863194', 'mariana@gmail.com', 'pass123', 1, 1),
+(15, '71245677', 'Ivana', 'Cardenas', 'Chávez', '986646898', 'ivana@gmail.com', 'pass123', 1, 2),
+(16, 'CE356675', 'Diego', 'Tomayquispe', 'Flores', '999544282', 'diego@gmail.com', 'pass123', 2, 3),
+(17, 'CE123454', 'Summy', 'Jimenez', 'Flores', '956231123', 'summy@gmail.com', 'pass123', 2, 3),
+(18, 'CE676546', 'Patricio', 'Choque', 'Pérez', '983995622', 'patricio@gmail.com', 'pass123', 2, 4);
 
 --
 -- Índices para tablas volcadas
