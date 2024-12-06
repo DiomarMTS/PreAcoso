@@ -25,7 +25,8 @@
             max-height: 200px;
             object-fit: cover;
             display: block;
-            margin: 0 auto; /* Centra la imagen */
+            margin: 0 auto;
+            /* Centra la imagen */
         }
 
         .container {
@@ -60,14 +61,16 @@
             color: #6a0dad;
             font-size: 24px;
             margin-bottom: 10px;
-            text-align: center; /* Centra el título */
+            text-align: center;
+            /* Centra el título */
         }
 
         p {
             font-size: 16px;
             color: #333;
             margin-bottom: 20px;
-            text-align: center; /* Centra el párrafo */
+            text-align: center;
+            /* Centra el párrafo */
         }
 
         .form-group {
@@ -78,13 +81,15 @@
         }
 
         input[type="text"] {
-            width: 80%; /* Ajusta el ancho del campo */
+            width: 80%;
+            /* Ajusta el ancho del campo */
             max-width: 400px;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            text-align: center; /* Centra el texto dentro del campo */
+            text-align: center;
+            /* Centra el texto dentro del campo */
         }
 
         .buttons {
@@ -135,11 +140,14 @@
             text-align: left;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
@@ -159,7 +167,8 @@
                 margin: 0 auto;
             }
 
-            table th, table td {
+            table th,
+            table td {
                 color: #000;
             }
 
@@ -170,63 +179,73 @@
 
         /* Estilos para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
-    img.tamaño {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-    }
+            img.tamaño {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                height: auto;
+            }
 
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        margin: 20px auto; /* Aumentar el margen de la tabla */
-    }
+            table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                margin: 20px auto;
+                /* Aumentar el margen de la tabla */
+            }
 
-    thead {
-        display: none;
-    }
+            thead {
+                display: none;
+            }
 
-    tr {
-        display: block;
-        margin-bottom: 20px; /* Aumentar el espacio entre filas */
-    }
+            tr {
+                display: block;
+                margin-bottom: 20px;
+                /* Aumentar el espacio entre filas */
+            }
 
-    td {
-        display: block;
-        text-align: right;
-        position: relative;
-        padding-left: 50%;
-        padding-right: 15px; /* Aumentar el espacio a la derecha */
-        margin-bottom: 20px; /* Aumentar espacio entre las celdas */
-        border: 1px solid #ddd;
-        font-size: 16px; /* Aumentar el tamaño de la fuente */
-        padding-top: 15px; /* Añadir más espacio arriba */
-        padding-bottom: 15px; /* Añadir más espacio abajo */
-    }
+            td {
+                display: block;
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+                padding-right: 15px;
+                /* Aumentar el espacio a la derecha */
+                margin-bottom: 20px;
+                /* Aumentar espacio entre las celdas */
+                border: 1px solid #ddd;
+                font-size: 16px;
+                /* Aumentar el tamaño de la fuente */
+                padding-top: 15px;
+                /* Añadir más espacio arriba */
+                padding-bottom: 15px;
+                /* Añadir más espacio abajo */
+            }
 
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-        font-size: 16px; /* Aumentar tamaño de las etiquetas */
-    }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                /* Aumentar tamaño de las etiquetas */
+            }
 
-    table th, table td {
-        color: #000;
-    }
+            table th,
+            table td {
+                color: #000;
+            }
 
-    table th {
-        color: #6a0dad;
-        font-size: 18px; /* Aumentar tamaño de la fuente de los encabezados */
-        padding-top: 20px; /* Añadir más espacio al encabezado */
-        padding-bottom: 20px;
-    }
-}
-        
+            table th {
+                color: #6a0dad;
+                font-size: 18px;
+                /* Aumentar tamaño de la fuente de los encabezados */
+                padding-top: 20px;
+                /* Añadir más espacio al encabezado */
+                padding-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
