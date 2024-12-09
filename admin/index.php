@@ -139,14 +139,14 @@ if (!isset($_SESSION['user_id'])) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-person-circle"></i>
-                    <span>Personal</span>
+                    <span>Persona</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">vistas General</h6>
-                        <a class="collapse-item" href="#">Usuarios</a>
-                        <a class="collapse-item" href="#">Empleados</a>
-                        <a class="collapse-item" href="#">Roles</a>
+                        <a class="collapse-item" href="pages/Administrador.php">Administrador</a>
+                        <a class="collapse-item" href="#">Estudiantes</a>
+                        <a class="collapse-item" href="#">Familiar</a>
                     </div>
                 </div>
             </li>
@@ -155,7 +155,7 @@ if (!isset($_SESSION['user_id'])) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="bi bi-journal-bookmark-fill"></i>
-                    <span>Control de Stock</span>
+                    <span>Control de casos</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -172,14 +172,14 @@ if (!isset($_SESSION['user_id'])) {
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Vistas
+                Consultas
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="bi bi-cart4"></i>
-                    <span>Ventas</span>
+                    <span>Casos</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">

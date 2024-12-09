@@ -1,3 +1,17 @@
+<?php
+//include 'config/datos.php';
+include '../../config/datos.php';
+include '../../config/conexion.php';
+
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../pages/login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +55,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3" style="height: 5px;">
                     Bienvenido
+                    <?php echo htmlspecialchars($_SESSION['first']); ?>
 
                 </div>
             </a>
@@ -74,7 +89,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">vistas</h6>
-                        <a class="collapse-item" href="../pages/clientes.php">Usuarios</a>
+                        <a class="collapse-item" href="../pages/Administrador.php">Usuarios</a>
                         <a class="collapse-item" href="../pages/empleados.php">Empleados</a>
                         <a class="collapse-item" href="../pages/roles.php">Roles</a>
                     </div>
@@ -86,7 +101,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="bi bi-journal-bookmark-fill"></i>
-                    <span>Control de Stock</span>
+                    <span>Control de casos</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -104,7 +119,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Ventas
+                Consultas
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -112,7 +127,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="bi bi-cart4"></i>
-                    <span>vistas</span>
+                    <span>casos</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -190,7 +205,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-1 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                <span class="mr-1 d-none d-lg-inline text-gray-600 small"><?php echo htmlspecialchars($_SESSION['correo']); ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="../assets/img/undraw_profile.svg">
                             </a>

@@ -108,6 +108,7 @@ session_start();
 
       // Make stuff animate on load
       chart.appear(1000, 100);
+      a
 
     }); // end am5.ready()
   </script>
@@ -195,7 +196,7 @@ session_start();
                       Conoce los lugares de alto riesgo y ayuda a mejorar la seguridad.
                     </p>
                     <div class="btn-box">
-                      <a href="pages/maps.php" class="btn-1">
+                      <a href="pages/mapa.php" class="btn-1">
                         Ver Mapa
                       </a>
                     </div>
@@ -224,7 +225,7 @@ session_start();
                       estás ayudando a prevenir futuros casos y protegiendo a otras personas.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                      <a href="pages/reportar.php" class="btn-1">
                         Reportar caso
                       </a>
                     </div>

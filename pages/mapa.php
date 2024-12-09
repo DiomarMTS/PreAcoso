@@ -153,10 +153,96 @@ try {
     }); // end am5.ready()
 </script>
 
+<div class="row"
+    style="height: 94vh; 
+              background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376)); 
+              background: linear-gradient(to right, #864ddf, #203376); height: auto;">
 
-<section style="height: 94vh;
-  background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
-  background: linear-gradient(to right, #864ddf, #203376);">
-    <div id="chartdiv" class="col-10" style="width: 100%; height: 700px"></div>
-</section>
+    <!-- Columna izquierda -->
+    <div class="col-12 col-md-2 " style="background-color: #ffff;">
+        <div class="d-grid gap-2 mt-3 px-2">
+            <button class="btn btn-info text-white">AYUDA</button>
+            <button class="btn btn-success text-white">LIMPIAR</button>
+        </div>
+
+        <!-- Menú vertical -->
+        <div class="list-group mt-3">
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-person-fill me-2"></i> DELITOS
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill me-2"></i> FALTAS
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-people-fill me-2"></i> VÍCTIMAS
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-person-badge-fill me-2"></i> VICTIMARIOS
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-house-door-fill me-2"></i> VICTIMIZACIÓN A HOGARES
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-shield-lock-fill me-2"></i> SEGURIDAD MUNICIPAL
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-tree-fill me-2"></i> SUPERFICIE DE SIEMBRA CON HOJA DE COCA
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-bank2 me-2"></i> GOBERNABILIDAD
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-building-fill me-2"></i> DEPENDENCIAS POLICIALES
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-globe me-2"></i> CLASIFICACIÓN INTERNACIONAL DE DELITOS
+            </a>
+        </div>
+
+        <!-- Footer con logo -->
+        <div class="text-center mt-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sustainable_Development_Goals_logo.png/800px-Sustainable_Development_Goals_logo.png"
+                alt="ODS Logo" class="img-fluid mb-2" style="max-width: 100px;">
+            <p class="mb-0">OBJETIVOS DE DESARROLLO SOSTENIBLE</p>
+        </div>
+
+
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col-12 col-md-8" id="chartdiv" style="height: 800px;">
+    </div>
+
+    <div class="col-12 col-md-2">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-title">Población de 15 y más, víctima de algún hecho de acoso en instituciones</h6>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center">
+                        <span class="legend-color" style="background-color: #6782dc;"></span> De 29,3 a 33,1
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <span class="legend-color" style="background-color: #ED9E59;"></span> De 25,5 a 29,3
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <span class="legend-color" style="background-color: #A34054;"></span> De 21,7 a 25,5
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <span class="legend-color" style="background-color: #662249;"></span> De 17,9 a 21,7
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <span class="legend-color" style="background-color: #44174E;"></span> De 14,1 a 17,9
+                    </li>
+                </ul>
+                <p class="card-text">
+                    <small>
+                        Fuente: Instituto Nacional de Estadística e Informática – Encuesta Nacional de Programas
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <?php include '../includes/footer.php'; ?>

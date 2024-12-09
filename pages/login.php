@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="../index.php" class="link active">home</a></li>
+                    <li><a href="../index.php" class="link active">Inicio</a></li>
                     <li><a href="about.php" class="link">Nosotros</a></li>
                     <li><a href="contact.php" class="link">Contacto</a></li>
                     <li><a href="maps.php" class="link">Ver mapa</a></li>
@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <form action="login.php" method="post">
                     <div class="input-box">
-                        <input type="text" class="input-field" name="username" placeholder="Usuario o Correo">
+                        <input type="text" class="input-field" name="username" placeholder="Correo">
                         <i class="bx bx-user"></i>
                     </div>
                     <div class="input-box">
