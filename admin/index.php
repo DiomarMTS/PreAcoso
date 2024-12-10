@@ -145,8 +145,8 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">vistas General</h6>
                         <a class="collapse-item" href="pages/Administrador.php">Administrador</a>
-                        <a class="collapse-item" href="#">Estudiantes</a>
-                        <a class="collapse-item" href="#">Familiar</a>
+                        <a class="collapse-item" href="pages/Estudiante.php">Estudiantes</a>
+                        <a class="collapse-item" href="pages/Familiare.php">Familiar</a>
                     </div>
                 </div>
             </li>
@@ -160,8 +160,8 @@ if (!isset($_SESSION['user_id'])) {
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">gestión personalizada</h6>
-                        <a class="collapse-item" href="#">Proveedores</a>
-                        <a class="collapse-item" href="#">Categorias</a>
+                        <a class="collapse-item" href="pages/IE.php">Ins. Educativa</a>
+                        <a class="collapse-item" href="pages/Grafica.php">Graficas</a>
                         <a class="collapse-item" href="#">Productos</a>
                     </div>
                 </div>

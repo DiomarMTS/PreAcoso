@@ -110,8 +110,8 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">gestión personalizada:</h6>
                         <a class="collapse-item" href="../pages/IE.php">Ins. Educativa</a>
-                        <a class="collapse-item" href="../pages/categorias.php">Categorias</a>
-                        <a class="collapse-item" href="../pages/productos.php">Productos</a>
+                        <a class="collapse-item" href="../pages/Grafica.php">Grafica de linea</a>
+                        <a class="collapse-item" href="../pages/TipoMedida.php">Grafica comparativa</a>
                     </div>
                 </div>
             </li>

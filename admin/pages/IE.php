@@ -49,7 +49,6 @@ require_once "../includes/header.php" ?>
                         <th>Distrito</th>
                         <th>Provincia</th>
                         <th>Despartamento</th>
-                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,17 +64,7 @@ require_once "../includes/header.php" ?>
                             <td><?php echo $dat['distrito']; ?></td>
                             <td><?php echo $dat['provincia']; ?></td>
                             <td><?php echo $dat['departamento']; ?></td>
-                            <td>
-                                <div class="text-center">
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarIE<?php echo $dat['id_institucion']; ?>">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                    <a href="../config/Delete/eliminarUsuario.php?id=<?php echo $dat['id_institucion']; ?>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')">
-                                        <i class="bi bi-trash3-fill"></i>
-                                    </a>
-                                </div>
-                            </td>
-                            <?php include '../config/Update/modelEditar.php' ?>
+
                         </tr>
                     <?php
                     }
