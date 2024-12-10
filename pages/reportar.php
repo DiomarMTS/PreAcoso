@@ -99,117 +99,112 @@ session_start();
     </header>
   </div>
   <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container contact_heading">
-      <h2>
-        Reportar Caso
-      </h2>
-      <p>
-        Su regsitro nos ayudara a darle seguimiento a la denuncia realizada y asi hacer llegar la sancion necesaria hacia los involucrados en el caso.
-      </p>
+ <section class="contact_section layout_padding">
+  <div class="container contact_heading">
+    <h2>
+      Reportar Caso
+    </h2>
+    <p>
+      Su registro nos ayudara a darle seguimiento a la denuncia realizada y asi hacer llegar la sancion necesaria hacia los involucrados en el caso.
+    </p>
+  </div>
+  <div class="form-container">
+        <h2>Formulario de Reporte de Caso</h2>
+        
+        <form action="../config/insertar_caso.php" method="POST" enctype="multipart/form-data">
+    <div>
+        <label for="fechaHecho">Fecha del Hecho:</label>
+        <input type="date" id="fechaHecho" name="fechaHecho" required>
     </div>
-    <div class="form-container">
-      <h2>Formulario de Reporte de Caso</h2>
-      <form action="submit_case.php" method="POST" enctype="multipart/form-data">
-        <!-- Colegio -->
-        <div class="form-group">
-          <label for="colegio">Colegio:</label>
-          <input type="text" id="colegio" name="colegio" placeholder="Nombre del colegio" required>
-        </div>
-
-        <div class="form-group">
-          <label for="codigo">Codigo Modular:</label>
-          <input type="text" id="codigo" name="codigo" placeholder="Codigo Modular" required>
-        </div>
-
-        <!-- Tipo de Caso -->
-        <div class="form-group">
-          <label for="tipo_caso">Tipo de Caso:</label>
-          <select id="tipo_caso" name="tipo_caso" required>
-            <option value="violencia sexual">Violencia Sexual</option>
-            <option value="violencia física">Violencia Física</option>
-            <option value="acoso verbal">Acoso Verbal</option>
-            <option value="discriminación">Discriminación</option>
-          </select>
-        </div>
-
-        <!-- Cargo del Agresor -->
-        <div class="form-group">
-          <label for="cargo_agresor">Cargo del Agresor:</label>
-          <input type="text" id="cargo_agresor" name="cargo_agresor" placeholder="Ej. Profesor, Director" required>
-        </div>
-
-        <div class="form-group">
-          <label for="cargo_agresor">Nombre del Agresor:</label>
-          <input type="text" id="cargo_agresor" name="cargo_agresor" placeholder="Nombres y Dni(Si tiene esa información)" required>
-        </div>
-
-        <!-- Fecha -->
-        <div class="form-group">
-          <label for="fecha">Fecha del Incidente:</label>
-          <input type="date" id="fecha" name="fecha" required>
-        </div>
-
-        <!-- Ubicación -->
-        <div class="form-group">
-          <label for="departamento">Departamento:</label>
-          <select id="departamento" name="departamento" required>
-            <option value="">Seleccione el departamento</option>
-            <option value="Amazonas">Amazonas</option>
-            <option value="Áncash">Áncash</option>
-            <option value="Apurímac">Apurímac</option>
-            <option value="Arequipa">Arequipa</option>
-            <option value="Ayacucho">Ayacucho</option>
-            <option value="Cajamarca">Cajamarca</option>
-            <option value="Cusco">Cusco</option>
-            <option value="Huancavelica">Huancavelica</option>
-            <option value="Huánuco">Huánuco</option>
-            <option value="Ica">Ica</option>
-            <option value="Junín">Junín</option>
-            <option value="La Libertad">La Libertad</option>
-            <option value="Lambayeque">Lambayeque</option>
-            <option value="Lima">Lima</option>
-            <option value="Loreto">Loreto</option>
-            <option value="Madre de Dios">Madre de Dios</option>
-            <option value="Moquegua">Moquegua</option>
-            <option value="Pasco">Pasco</option>
-            <option value="Piura">Piura</option>
-            <option value="Puno">Puno</option>
-            <option value="San Martín">San Martín</option>
-            <option value="Tacna">Tacna</option>
-            <option value="Tumbes">Tumbes</option>
-            <option value="Ucayali">Ucayali</option>
-
-            <!-- Agregar más departamentos según sea necesario -->
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="provincia">Provincia:</label>
-          <input type="text" id="provincia" name="provincia" placeholder="Provincia" required>
-        </div>
-
-        <div class="form-group">
-          <label for="descripcion">Descripción del Caso:</label>
-          <br>
-          <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describe el caso con detalle..." required></textarea>
-        </div>
-
-        <!-- Subir Evidencia Multimedia -->
-        <div class="form-group">
-          <label for="evidencia">Subir Evidencia (Imágenes, Videos, Audio, Texto):</label>
-          <input type="file" id="evidencia" name="evidencia[]" accept="image/*,video/*,audio/*,.txt" multiple required>
-        </div>
-
-
-      </form>
+    <div>
+        <label for="cargoAgresor">Cargo del Agresor:</label>
+        <select id="cargoAgresor" name="cargoAgresor" required>
+            <!-- Opciones dinámicas -->
+            <option value="Auxiliar de educación">Auxiliar de educación</option>
+            <option value="Ley de servicio civil">Ley de servicio civil</option>
+            <option value="Profesor contratado">Profesor contratado</option>
+            <option value="Profesor Nombrado">Profesor Nombrado</option>
+            <option value="Sin regimen laboral">Sin regimen laboral</option>
+            <option value="Trabajador administrativo">Trabajador administrativo</option>
+            <option value="Trabajador CAS">Trabajador CAS</option>
+            
+            
+        </select>
+            
     </div>
-
-    <div class="d-flex justify-content-center">
-      <button type="submit" class="">Reportar Caso</button>
+    <div>
+        <label for="tipoViolencia">Tipo de Violencia:</label>
+        <select id="tipoViolencia" name="tipoViolencia" required>
+            <!-- Opciones dinámicas -->
+            <option value="Violación sexual">Violación sexual</option>
+            <option value="Acoso sexual">Acoso sexual</option>
+            <option value="Hostigamiento sexual">Hostigamiento sexual</option>
+            <option value="Hostigamiento y acoso sexual">Hostigamiento y acoso sexual</option>
+            <option value="Tocamientos indebidos">Tocamientos indebidos</option>
+            <option value="Violencia con fines sexuales a través de medios tecnológicos">Violencia con fines sexuales a través de medios tecnológicos</option>
+            
+            
+        </select>
     </div>
-    </form>
-
-  </section>
+      <div>
+        <label for="id_user">Usuario</label>
+        <select id="id_user" name="id_user" required>
+           
+            <option value="10">Patrick Champe</option>
+            
+        </select> 
+    </div> 
+    <div>
+        <label for="id_norma">Norma:</label>
+        <select id="id_norma" name="id_norma" required>
+            <!-- Opciones dinámicas -->
+            <option value="10">Ley de Bases de la Carrera Administrativa y de Remuneraciones del Sector Público, Decreto Legislativo N° 276</option>
+            <option value="11">Ley de Reforma Magisterial, Ley N° 29944</option>
+            <option value="12">Ley del Código de Ética de la Función Pública, Ley N° 27815 modificada por la Ley N° 28496</option>
+            <option value="13">Ley del Servicio Civil, Ley N° 30057</option>
+            <option value="14">Sin norma aplicada</option>
+            
+        </select>
+    </div>
+    <div>
+        <label for="id_tipoMedida">Tipo de Medida:</label>
+        <select id="id_tipoMedida" name="id_tipoMedida" required>
+            <option value="1">Suspensión Temporal</option>
+            <option value="13">Cese de contrato</option>
+            <option value="14">Medida cautelar</option>
+            <option value="15">Retiro</option>
+            <option value="16">Separación</option>
+            <option value="17">Sin tipo de medida</option>
+        </select>
+    </div>
+    <div>
+        <label for="id_institucion">Institución:</label>
+        <select id="id_institucion" name="id_institucion" required>
+            <option value="1">SAN JOSE DEL ARENAL</option>
+            <option value="2">ABRAHAM LOPEZ LUCERO</option>
+            <option value="3">NIÑO JESUS DE PRAGA</option>
+            <option value="4">RAQUEL ROBLES DE ROMAN</option>
+            <option value="5">DIVINO NIÑO JESUS</option>
+            
+        </select>
+    </div>
+    <div>
+        <label for="id_evaluacion">Evaluación:</label>
+        <select id="id_evaluacion" name="id_evaluacion" required>
+            <option value="3">NO, el caso aún no ha sido atendido por falta de documentos</option>
+            <option value="5">Sin Sancion, se inició el proceso de análisis del caso</option>
+            <option value="3">NO, atención finalizada sin inconvenientes</option>
+            <option value="5">SI, caso en espera de validación final por el supervisor</option>
+            <option value="3">SI, caso validado y cerrado sin observaciones</option>
+            
+        </select>
+    </div>
+    <div>
+        <button type="submit">Agregar Caso</button>
+    </div>
+</form>
+  
+</section>
 
 
   <!-- end contact section -->
