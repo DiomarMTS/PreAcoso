@@ -145,7 +145,7 @@ session_start();
                       <a class="nav-link" href="pages/contact.php">Contactenos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/maps.php">Ver Mapa</a>
+                      <a class="nav-link" href="pages/mapa.php">Ver Mapa</a>
                     </li>
                     <?php if (isset($_SESSION['first'])): ?>
                       <!-- Dropdown para usuario logueado -->
