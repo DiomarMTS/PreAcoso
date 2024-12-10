@@ -46,7 +46,9 @@ if (!isset($_SESSION['user_id'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #cd0c17; ">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="height: 94vh;
+                background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
+                background: linear-gradient(to right, #864ddf, #203376);">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
@@ -84,14 +86,14 @@ if (!isset($_SESSION['user_id'])) {
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="bi bi-person-circle"></i>
-                    <span>Usuarios</span>
+                    <span>Persona</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">vistas</h6>
-                        <a class="collapse-item" href="../pages/Administrador.php">Usuarios</a>
-                        <a class="collapse-item" href="../pages/empleados.php">Empleados</a>
-                        <a class="collapse-item" href="../pages/roles.php">Roles</a>
+                        <h6 class="collapse-header">vistas General</h6>
+                        <a class="collapse-item" href="../pages/Administrador.php">Administrador</a>
+                        <a class="collapse-item" href="../pages/Estudiante.php">Estudiante</a>
+                        <a class="collapse-item" href="../pages/Familiare.php">Familiar</a>
                     </div>
                 </div>
             </li>
@@ -131,8 +133,8 @@ if (!isset($_SESSION['user_id'])) {
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Gestion de ventas</h6>
-                        <a class="collapse-item" href="#">ventas</a>
+                        <h6 class="collapse-header">Gestion de casos</h6>
+                        <a class="collapse-item" href="#">casos</a>
                         <a class="collapse-item" href="# ">Semanal</a>
                         <a class="collapse-item" href="#">Mensual</a>
                     </div>

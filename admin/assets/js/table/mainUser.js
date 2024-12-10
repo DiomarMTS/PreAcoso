@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    tablaCliente = $("#tablaCliente").DataTable({
+    tablaUsuarios = $("#tablaUsuarios").DataTable({
         
         //Para cambiar el lenguaje a español
     "language": {

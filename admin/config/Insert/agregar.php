@@ -494,7 +494,7 @@
 </div>
 
 <!-- ********************************** *********************************** -->
-<!--                                 Clientes                               -->
+<!--                                 Usuario                             -->
 <!-- ********************************** *********************************** -->
 
 <div class="modal fade" id="agregarCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

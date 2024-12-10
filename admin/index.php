@@ -183,7 +183,7 @@ if (!isset($_SESSION['user_id'])) {
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Apartado Ventas</h6>
+                        <h6 class="collapse-header">Apartado Casos</h6>
                         <a class="collapse-item" href="#">ventas</a>
                         <a class="collapse-item" href="#">Semanal</a>
                         <a class="collapse-item" href="#">Mensual</a>

@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li><a href="../index.php" class="link active">Inicio</a></li>
                     <li><a href="about.php" class="link">Nosotros</a></li>
                     <li><a href="contact.php" class="link">Contacto</a></li>
-                    <li><a href="maps.php" class="link">Ver mapa</a></li>
+                    <li><a href="mapa.php" class="link">Ver mapa</a></li>
                 </ul>
             </div>
             <div class="nav-button">

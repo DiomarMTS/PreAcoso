@@ -1,11 +1,11 @@
 
 <?php
 
-if (isset($_POST['accionRol'])) {
-    switch ($_POST['accionRol']) {
+if (isset($_POST['accionUser'])) {
+    switch ($_POST['accionUser']) {
             //casos de registros
-        case 'editarRol':
-            editarRol();
+        case 'editarUser':
+            editarUser();
             break;
     }
 }
@@ -54,21 +54,30 @@ if (isset($_POST['accionProveedor'])) {
     }
 }
 
-function editarRol()
+function editarUser()
 {
 
-    require_once '../../../config/confiig.php';
+    require_once '../../../config/datos.php';
     require_once '../../../config/conexion.php';
 
     extract($_POST);
 
     try {
 
-        $stmt = $pdo->prepare("UPDATE `roles` SET `nombre_rol`=:rol,`Estado`=:estado WHERE `id_rol`=:id");
+        $stmt = $pdo->prepare("UPDATE `usuario` SET `id_tipoDoc`=:tipoDoc , `DNI`=:numDoc, `nombre`=:nombre,
+                             `apellidoPaterno`=:apellidoPaterno, `apellidoMaterno`=:apellidoMaterno, `contacto`=:contacto,
+                              `email`=:email, `pass`=:pass, `id_rol`=:rol WHERE `id_user`=:id");
 
         // Vincular los parámetros
+        $stmt->bindParam(':tipoDoc', $tipoDoc);
+        $stmt->bindParam(':numDoc', $numDoc);
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':apellidoPaterno', $apellidoPaterno);
+        $stmt->bindParam(':apellidoMaterno', $apellidoMaterno);
+        $stmt->bindParam(':contacto', $contacto);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':pass', $pass);
         $stmt->bindParam(':rol', $rol);
-        $stmt->bindParam(':estado', $estado);
         $stmt->bindParam(':id', $id);
 
         if ($stmt->execute()) {
@@ -84,7 +93,7 @@ function editarRol()
                 confirmButtonText: 'OK',
                 timer: 1500
               }).then(() => {
-                location.assign('../../pages/roles.php');
+                location.assign('../../pages/Administrador.php');
               });
     });
         </script>";
@@ -101,7 +110,7 @@ function editarRol()
                 confirmButtonText: 'OK',
                 timer: 1500
               }).then(() => {
-                location.assign('../../pages/roles.php');
+                location.assign('../../pages/Administrador.php');
               });
     });
         </script>";
@@ -119,7 +128,7 @@ function editarRol()
                 confirmButtonText: 'OK',
                 timer: 1500
               }).then(() => {
-                location.assign('../../pages/roles.php');
+                location.assign('../../pages/Administrador.php');
               });
         });
         </script>";

@@ -17,8 +17,9 @@ require_once "../includes/header.php" ?>
                             Rol r ON u.id_rol = r.id_rol
                         INNER JOIN 
                             TipoDoc td ON u.id_tipoDoc = td.id_tipoDoc
-                            where 
-                            r.descripcion = 'Administrador';";
+                            WHERE 
+                            r.descripcion = 'Estudiante';";
+
         $resultado = $pdo->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
