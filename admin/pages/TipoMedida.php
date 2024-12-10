@@ -13,6 +13,7 @@
                 <div>
                     <label for="anio1" class="form-label">año 1:</label>
                     <select class="form-select" name="anio1" id="anio1" required>
+                        <option value="2017">2017</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -27,6 +28,7 @@
                 <div>
                     <label for="anio2" class="form-label">año 2:</label>
                     <select class="form-select" name="anio2" id="anio2" required>
+                        <option value="2017">2017</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
