@@ -18,7 +18,7 @@ session_start();
     <meta name="author" content="" />
 
     <title>PreAcoso</title>
-
+    <link rel="icon" href="../assets/images/logo.png">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 

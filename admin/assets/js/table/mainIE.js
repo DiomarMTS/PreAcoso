@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    tablaCategoria = $("#tablaCategoria").DataTable({
+    tablaIE = $("#tablaIE").DataTable({
         
         //Para cambiar el lenguaje a español
     "language": {
