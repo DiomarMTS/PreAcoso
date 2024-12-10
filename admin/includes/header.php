@@ -134,9 +134,9 @@ if (!isset($_SESSION['user_id'])) {
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Gestion de casos</h6>
-                        <a class="collapse-item" href="#">casos</a>
-                        <a class="collapse-item" href="# ">Semanal</a>
-                        <a class="collapse-item" href="#">Mensual</a>
+                        <a class="collapse-item" href="#">Evaluacion</a>
+                        <a class="collapse-item" href="# ">Normas</a>
+                        <a class="collapse-item" href="#">Casos en proceso</a>
                     </div>
                 </div>
             </li>
